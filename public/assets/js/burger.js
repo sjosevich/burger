@@ -41,10 +41,10 @@ $(function() {
         }
       );
     });
-    $(".trashburger").on("click", function(event){
+    $(".trashbutton").on("click", function(event){
         // Make sure to preventDefault on a submit event.
        event.preventDefault();
-
+       var id =$(this).data("id")
        //Dend the DELETE request
        $.ajax({
          type: "DELETE",
