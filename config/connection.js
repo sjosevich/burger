@@ -12,7 +12,8 @@ var connection = mysql.createConnection({
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: "burgers_db"
-});
+
+} || process.env.JAWSDB_URL);
 
 // Make connection.
 connection.connect(function(err) {
